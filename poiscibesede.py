@@ -28,5 +28,14 @@ class PoisciBesede:
     
   def kvadratek(self, index):
     
+    
+    
+    
+    
+  besede = ["LUNA", "SLIKE", "OMARA", "OKNO", "OSA", "OGLEDALO", "VREČKA", "SVINČNIK", "ZNAMKA", "KOLEDAR", 
+            "FLAŠA", "ZVEZEK", "BATERIJA", "KEMIK", "RAČUNALNIK", "RADIRKA", "ČOKOLADA", "DOM", "ROKOVNIK", 
+            "REKA", "VERIŽICA", "KRPA", "MIŠ", "ŠKARJE", "KLOVN", "VODA", "NAŠA", "LEN"]
+  
+    
 
 
