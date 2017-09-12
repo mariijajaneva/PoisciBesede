@@ -6,48 +6,35 @@ import random
 
 class PoisciBesede:
   
-  def __init__(self, visina, sirina):
+  def __init__(self, visina=10 sirina=12)
     self.visina = visina
     self.sirina = sirina
+    self.plosca = []
+    for i in range(visina):
+      self.plosca[i] = sirina * ["0"]
     print('Ustvarili smo začetno ploščo')
     
   def vrstica(self, index):
-    vrstica = 0
-    for i in range(1,11):
-      vrstica += (self.visina) // 10
-      print ('vrstica')
-      return vrstica
+    return self.plosca[index]
       
       
-    
-    
   def stolpec(self, index):
-    for j in range(1, 13):
+    return self.plosca[::][index]
       
-      
-    
-    
-    
-    
-  def kvadratek(self, index):
-    
-    
-    
-    
-  
+     
   def postavitev_besede(beseda, plosca):
     beseda = random.choice([beseda, beseda[::-1]])
     
     d = random.choice([[1,0], [0,1], [1,1]])
     if d[0] == 0:
-      xsize = sirina
-     else:
-      xsize = sirina - len(beseda)
+      xsize = self.sirina
+    else:
+      xsize = self.sirina - len(beseda)
       
     if d[1] == 0:
-      ysize = visina
+      ysize = self.visina
     else:
-      ysize = visina - len(beseda)
+      ysize = self.visina - len(beseda)
       
     x = random.randrange(0, xsize)
     y = random.randrange(0, ysize)
@@ -58,7 +45,7 @@ class PoisciBesede:
   
   plosca = [[random.choice(string.uppercase) for i in xrange(0,sirina)] for j in xrange(0, visina)]
     
-  print "\n",join(map(lambda row: " ".join(row), plosca)]
+  print "\n",join(map(lambda vrstica: " ".join(vrstica), plosca)]
                   
   beseda = ["LUNA", "SLIKE", "OMARA", "OKNO", "OSA", "OGLEDALO", "VREČKA", "SVINČNIK", "ZNAMKA", "KOLEDAR", 
             "FLAŠA", "ZVEZEK", "BATERIJA", "KEMIK", "RAČUNALNIK", "RADIRKA", "ČOKOLADA", "DOM", "ROKOVNIK", 
